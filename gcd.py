@@ -12,6 +12,15 @@ def gcd(a, b):
 
     return a
 
+def gcdmod(a, b):
+    while b != 0:
+        if a > b:
+            c = a%b
+            a,b = b,c
+        elif b > a:
+            a,b = b,a
+    return a
+
 
 print(gcd(66528, 52920))
 
